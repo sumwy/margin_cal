@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/spreadsheet_view.dart'; // Import the new view
+import 'screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,12 +11,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Spreadsheet App', // Updated title
+      title: '마진 계산기',
       theme: ThemeData(
-        primarySwatch: Colors.green, // Changed theme color
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        primarySwatch: Colors.blue,
+        useMaterial3: true,
+        fontFamily: 'Noto Sans KR',
       ),
-      home: const SpreadsheetView(), // Use the SpreadsheetView as home
+      home: const HomeScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
